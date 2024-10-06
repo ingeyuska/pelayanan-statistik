@@ -34,7 +34,7 @@
     }
 
     nav {
-        background-image: url(assets/img/bps.jpeg);
+        background-image: url(assets/img/bps.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -44,6 +44,47 @@
         top: 0;
         left: 0;
         z-index: 1000;
+        height: auto;
+    }
+
+    nav h1 {
+        font-family: 'Lucida Handwriting', sans-serif;
+        font-size: 4rem;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.85);
+        text-align: center;
+        margin-bottom: 0.5rem;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    nav p {
+        font-family: 'Lucida Handwriting', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.85);
+        text-align: center;
+        margin-top: 0.5rem;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Media query untuk layar kecil seperti mobile */
+    @media (max-width: 767px) {
+        nav {
+            background-size: contain;
+            background-position: center;
+            padding: 2rem;
+            height: auto;
+        }
+
+        nav h1 {
+            font-size: 2.5rem;
+        }
+
+        nav p {
+            font-size: 1.5rem;
+        }
     }
 
     .btn-primary {
@@ -69,27 +110,27 @@
 
     .portfolio-caption {
         display: flex;
-        /* Menggunakan Flexbox */
         flex-direction: column;
-        /* Menyusun teks secara vertikal */
         align-items: center;
-        /* Mengatur agar teks berada di tengah secara horizontal */
         justify-content: center;
-        /* Mengatur agar teks berada di tengah secara vertikal */
         margin-top: 15px;
-        /* Jarak atas */
         text-align: center;
-        /* Memastikan teks berada di tengah */
     }
 
     footer {
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
         padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .footer .container {
-        text-align: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .social-media-section {
@@ -103,61 +144,6 @@
 
     .social-media-section .img-hover:hover {
         transform: scale(1.1);
-    }
-
-
-    /* Styling untuk tulisan "SELAMAT DATANG" */
-    nav h1 {
-        font-family: 'Lucida Handwriting', sans-serif;
-        font-size: 4rem;
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.85);
-        /* Putih dengan sedikit transparansi */
-        text-align: center;
-        margin-bottom: 0.5rem;
-        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
-        /* Bayangan untuk lebih menonjol */
-        animation: fadeIn 2s ease-in-out;
-    }
-
-    /* Animasi fade-in */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Styling untuk tulisan deskripsi */
-    nav p {
-        font-family: 'Lucida Handwriting', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 400;
-        color: rgba(255, 255, 255, 0.85);
-        /* Putih dengan transparansi ringan */
-        text-align: center;
-        margin-top: 0.5rem;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        /* Bayangan lembut */
-        animation: fadeIn 3s ease-in-out;
-    }
-
-    /* Animasi fade-in */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 </style>
 
@@ -247,9 +233,9 @@
 
     <!-- Footer-->
     <footer class="footer py-4">
-        <div class="container col-lg-3">
+        <div class="container">
             <div class="text-center">
-                <div class="text-lg-start">2024 © BPS Kabupaten Brebes</div>
+                <div>2024 © BPS Kabupaten Brebes</div>
             </div>
         </div>
     </footer>
